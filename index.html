@@ -1,0 +1,72 @@
+*JE COMPRENDS MA REINE, C’EST GALÈRE 😅*
+
+WhatsApp coupe le message avec `Voir plus`. Du coup t’arrives pas à tout sélectionner.
+
+### *ON CHANGE DE TECHNIQUE - 100% SANS COPIER-COLLER :*
+
+#### *PLAN B : UPLOAD LE FICHIER DIRECT*
+C’est encore plus simple que copier :
+
+1. *Sur ton ordi* → Ouvre le *Bloc-notes*
+2. *Je te redonne le code COMPLET* juste en dessous 👇
+3. *Sélectionne TOUT* → `Ctrl + A` puis `Ctrl + C`
+4. *Colle dans Bloc-notes* → `Ctrl + V`
+5. *Fichier → Enregistrer sous* → Bureau
+6. *Nom* : `index.html` *OBLIGATOIRE*
+7. *Type* : `Tous les fichiers` pas `Document texte`
+8. *Sur Github* → Clique `Cancel` pour sortir de la page
+9. Clique *`Add file` → `Upload files`*
+10. *Glisse `index.html`* depuis le Bureau → *`Commit changes`*
+
+*VOICI LE CODE COMPLET À COPIER DANS LE BLOC-NOTES :*
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U-Bourse - Bourses d'Études CG 2026</title>
+  <style>
+    body{font-family:Arial;background:#f0f0f0;padding:15px;margin:0}
+    .header{background:#0066cc;color:white;padding:20px;text-align:center;border-radius:10px}
+    .btn{display:block;background:#0066cc;color:white;padding:18px;margin:12px 0;border-radius:10px;font-size:18px;text-decoration:none;text-align:center;cursor:pointer}
+    .btn-retour{background:#555}
+    .btn-alarme{background:#ff6b35;font-size:14px;padding:10px}
+    .card{background:white;padding:15px;margin:12px 0;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);text-align:left}
+    .hidden{display:none}
+    h2{color:#0066cc;border-bottom:2px solid #0066cc;padding-bottom:5px}
+    h3{margin:5px 0;color:#333}
+    .badge{background:#ffcc00;color:#000;padding:3px 8px;border-radius:5px;font-size:12px}
+    .info{margin:8px 0;font-size:14px}
+    .lien{display:inline-block;background:#28a745;color:white;padding:8px 12px;border-radius:5px;text-decoration:none;margin-top:8px}
+    .offline{position:fixed;top:0;left:0;right:0;background:#dc3545;color:white;padding:15px;text-align:center;z-index:9999}
+  </style>
+</head>
+<body>
+  <div id="offline" class="offline hidden">⚠️ Connexion Internet requise</div>
+  <div class="header"><h1>U-Bourse - Études à l'Étranger</h1></div>
+  <div id="home">
+    <div class="info" style="text-align:center;margin:15px 0">Bourses offertes aux nouveaux bacheliers et étudiants du Congo.</div>
+    <a class="btn" onclick="show('univ')">🏫 Universités du Congo</a>
+    <a class="btn" onclick="show('afrique')">🌍 BOURSE AFRICAINE</a>
+    <a class="btn" onclick="show('europe')">🇪🇺 BOURSE EUROPÉENNES</a>
+    <a class="btn" onclick="show('amerique')">🇺🇸 BOURSE AMÉRICAINE</a>
+    <a class="btn" onclick="show('asie')">🌏 BOURSE ASIATIQUES</a>
+    <a class="btn" onclick="show('alertes')" style="background:#ff6b35">🔔 Mes Alertes Dépôt</a>
+  </div>
+  <div id="univ" class="hidden"><h2>Universités du Congo</h2><div class="card"><h3>Université Marien Ngouabi <span class="badge">Brazzaville</span></h3><div class="info"><b>Dépôt dossiers :</b> 15 Juillet - 30 Août 2026</div><a href="https://www.univ-mngb.net" class="lien" target="_blank">Site officiel →</a><a class="btn btn-alarme" onclick="addAlarme('UMNG','2026-08-30')">🔔 Alarme 30 Août 2026</a></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <div id="afrique" class="hidden"><h2>🌍 BOURSES AFRICAINES</h2><div class="card"><h3>Mastercard Foundation <span class="badge">100% Financée</span></h3><a href="https://mastercardfdn.org" class="lien" target="_blank">Postuler →</a><a class="btn btn-alarme" onclick="addAlarme('Mastercard','2026-03-31')">🔔 Alarme 31 Mars</a></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <div id="europe" class="hidden"><h2>🇪🇺 BOURSES EUROPÉENNES</h2><div class="card"><h3>Chevening UK <span class="badge">Master 100%</span></h3><div class="info"><b>Dépôt :</b> Août - Novembre 2025</div><a href="https://www.chevening.org" class="lien" target="_blank">Postuler →</a><a class="btn btn-alarme" onclick="addAlarme('Chevening','2025-11-05')">🔔 Alarme 5 Nov</a></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <div id="amerique" class="hidden"><h2>🇺🇸 BOURSES AMÉRICAINES</h2><div class="card"><h3>Fulbright USA <span class="badge">Master/PhD</span></h3><div class="info"><b>Dépôt :</b> Février - Mai 2026</div><a href="https://foreign.fulbrightonline.org" class="lien" target="_blank">Postuler →</a><a class="btn btn-alarme" onclick="addAlarme('Fulbright','2026-05-01')">🔔 Alarme 1 Mai</a></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <div id="asie" class="hidden"><h2>🌏 BOURSES ASIATIQUES</h2><div class="card"><h3>Bourse Chine CSC <span class="badge">100% Financée</span></h3><div class="info"><b>Dépôt :</b> Janvier - Avril 2026</div><a href="http://www.campuschina.org" class="lien" target="_blank">Postuler →</a><a class="btn btn-alarme" onclick="addAlarme('Chine CSC','2026-04-15')">🔔 Alarme 15 Avril</a></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <div id="alertes" class="hidden"><h2>🔔 Mes Alertes Activées</h2><div id="liste-alarmes"></div><a class="btn btn-retour" onclick="show('home')">← Retour accueil</a></div>
+  <script>
+    function checkInternet(){if(!navigator.onLine){document.getElementById('offline').className='offline';document.body.style.overflow='hidden'}else{document.getElementById('offline').className='offline hidden';document.body.style.overflow='auto'}}
+    window.addEventListener('online',checkInternet);window.addEventListener('offline',checkInternet);checkInternet();
+    function show(p){['home','univ','afrique','europe','amerique','asie','alertes'].forEach(id=>{document.getElementById(id).className='hidden'});document.getElementById(p).className='';if(p=='alertes')afficherAlarmes()}
+    function addAlarme(n,d){let a=JSON.parse(localStorage.getItem('alarmesCG')||'[]');if(!a.find(x=>x.nom===n)){a.push({nom:n,date:d});localStorage.setItem('alarmesCG',JSON.stringify(a));alert('✅ Alarme ajoutée pour '+n+' le '+d);if(Notification.permission!=='granted')Notification.requestPermission()}else{alert('Alarme déjà activée pour '+n)}}
+    function afficherAlarmes(){let a=JSON.parse(localStorage.getItem('alarmesCG')||'[]');let h='';if(a.length===0){h='<div class="card">Aucune alarme. Clique sur 🔔 dans les bourses.</div>'}else{a.forEach((x,i)=>{h+=`<div class="card"><h3>${x.nom}</h3><div class="info"><b>Date limite :</b> ${x.date}</div><a class="btn btn-retour" onclick="supprimerAlarme(${i})" style="background:#dc3545">Supprimer</a></div>`})}document.getElementById('liste-alarmes').innerHTML=h}
+    function supprimerAlarme(i){let a=JSON.parse(localStorage.getItem('alarmesCG')||'[]');a.splice(i,1);localStorage.setItem('alarmesCG',JSON.stringify(a));afficherAlarmes()}
+  </script>
+</body>
+</html>
+*C’est 10x plus rapide ma reine.* Tu bloques où exactement ? Dis-moi *`BLOC-NOTES OK`* quand le fichier est créé 💚
