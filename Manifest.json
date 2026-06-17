@@ -1,0 +1,16 @@
+{
+  "name": "U-Bourse",
+  "short_name": "U-Bourse",
+  "start_url": "./index.html",
+  "display": "standalone", 
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "description": "La bourse des étudiants du Congo",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
